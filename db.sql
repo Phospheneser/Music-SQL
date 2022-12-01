@@ -11,7 +11,8 @@ CREATE TABLE auth_user (
 
 CREATE TABLE music(
     id serial PRIMARY KEY,
-    musicname character varying(255) NOT NULL,
+    sid int,
+    musicname character varying(255) NOT NULL UNIQUE,
     length int default(0) NOT NULL,
     year int default(0),
     language character varying(255) NOT NULL,
